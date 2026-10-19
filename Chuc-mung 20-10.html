@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gửi cô gái của tớ 💛</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow: #ffd34e;
+    --gold: #e9a900;
+    --cream: #fff9e9;
+    --brown: #735126;
+    --pink: #fff0d2;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #fff9e9, #ffe7a1, #fffdf5);
+    color: var(--brown);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 25px;
+}
+
+.small-title {
+    display: inline-block;
+    padding: 9px 20px;
+    background: white;
+    border: 1px solid #ffe08a;
+    border-radius: 30px;
+    color: #b88300;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(38px, 8vw, 72px);
+    color: #e6a900;
+    margin: 22px 0 10px;
+    text-shadow: 2px 3px 0 white;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.heart {
+    display: inline-block;
+    color: #ffbd20;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.25); }
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 0 auto 45px;
+}
+
+.card {
+    background: rgba(255,255,255,0.86);
+    border: 1px solid #ffe39b;
+    border-radius: 28px;
+    padding: 28px;
+    margin: 22px 0;
+    box-shadow: 0 12px 35px rgba(181, 131, 24, 0.12);
+}
+
+.flower-area {
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+.bouquet {
+    font-size: clamp(100px, 22vw, 180px);
+    line-height: 1.4;
+    filter: drop-shadow(0 8px 8px #e8bd5b55);
+    animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+.ribbon {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffe77c, #ffbf22);
+    padding: 10px 24px;
+    border-radius: 30px;
+    color: #805800;
+    font-weight: bold;
+    margin-top: 8px;
+    box-shadow: 0 5px 15px #e8b52b33;
+}
+
+h2 {
+    color: #d99b00;
+    font-size: 27px;
+    margin-bottom: 16px;
+}
+
+.message {
+    font-size: 16px;
+    line-height: 2;
+}
+
+.message p {
+    margin-bottom: 13px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+    color: #c38b00;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 23px;
+    background: linear-gradient(135deg, #ffe16b, #ffc52e);
+    color: #694800;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 14px #d9a62030;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #d9a62055;
+}
+
+button.secondary {
+    background: white;
+    border: 1px solid #ffdc77;
+}
+
+.letter {
+    display: none;
+    background: #fff9e8;
+    border: 2px dashed #f1c34c;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 22px;
+    line-height: 2;
+    animation: appear 0.6s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.compliments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    margin-top: 18px;
+}
+
+.compliment {
+    background: #fff8dc;
+    border: 1px solid #ffe8a1;
+    border-radius: 18px;
+    padding: 18px 10px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.compliment:hover {
+    transform: translateY(-4px) rotate(-1deg);
+    background: #fff0b5;
+}
+
+.compliment span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 15px 45px;
+    color: #b88918;
+    line-height: 2;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    z-index: 10;
+    animation: floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .card { padding: 21px; }
+    .compliments { grid-template-columns: 1fr 1fr; }
+    .message { font-size: 15px; }
+    .hero { padding-top: 35px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="small-title">✦ A LITTLE GIFT FOR YOU ✦</div>
+
+    <h1>Happy 20/10 <span class="heart">💛</span></h1>
+
+    <p class="subtitle">
+        Gửi cô gái đặc biệt nhất của tớ 🌻<br>
+        Mong ngày hôm nay của cậu ngọt ngào như những bông hoa.
+    </p>
+</header>
+
+<main class="container">
+
+    <section class="card flower-area">
+        <div class="bouquet">💐</div>
+        <div class="ribbon">🌼 Một bó hoa vàng dành riêng cho cậu 🌼</div>
+        <p style="margin-top:20px; line-height:1.9;">
+            Nếu những bông hoa có thể nói chuyện,<br>
+            chắc chúng cũng sẽ khen cậu thật nhiều đó. 💛
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>💌 Gửi cô gái của tớ</h2>
+
+        <div class="message">
+            <p>
+                Chúc cậu có một ngày 20/10 thật vui vẻ,
+                luôn gặp những điều dễ thương và có thật nhiều lý do để mỉm cười.
+            </p>
+
+            <p>
+                Cảm ơn cậu vì đã xuất hiện trong cuộc sống của tớ,
+                vì những khoảnh khắc vui vẻ, những câu chuyện nhỏ
+                và những kỷ niệm mà chúng mình cùng tạo nên.
+            </p>
+
+            <p>
+                Tớ mong cậu luôn tự tin, luôn được làm những điều mình thích,
+                theo đuổi những ước mơ của mình và đừng quên chăm sóc bản thân nha.
+            </p>
+
+            <p>
+                Mong những ngày buồn của cậu sẽ ngắn lại,
+                những ngày vui sẽ dài thêm,
+                và cuộc sống sẽ dịu dàng với cậu như nắng vàng ngày thu. 🌻
+            </p>
+
+            <p>
+                Chúc cô gái thích màu vàng của tớ luôn rực rỡ,
+                hạnh phúc và được yêu thương thật nhiều! 💛
+            </p>
+        </div>
+
+        <div class="signature">
+            — Người luôn mong cậu vui vẻ 💛
+        </div>
+
+        <div class="buttons">
+            <button onclick="openLetter()">
+                🎁 Mở món quà bí mật
+            </button>
+
+            <button class="secondary" onclick="sendHearts()">
+                💛 Gửi thêm trái tim
+            </button>
+        </div>
+
+        <div class="letter" id="secretLetter">
+            <h2>🌷 Một điều tớ muốn nói...</h2>
+
+            <p>
+                Giữa rất nhiều người ngoài kia,
+                tớ thấy thật vui vì chúng mình đã gặp nhau.
+            </p>
+
+            <p>
+                Có thể tớ không phải lúc nào cũng giỏi nói ra những điều
+                trong lòng, nhưng tớ mong cậu biết rằng cậu rất đặc biệt.
+            </p>
+
+            <p>
+                Tớ hy vọng chúng mình sẽ có thêm thật nhiều kỷ niệm đẹp,
+                cùng cười vì những chuyện ngốc nghếch,
+                cùng cố gắng và cùng trưởng thành hơn mỗi ngày.
+            </p>
+
+            <p>
+                Không chỉ riêng ngày 20/10,
+                tớ mong cậu sẽ luôn có những ngày thật hạnh phúc. 🌼
+            </p>
+
+            <p style="text-align:right; color:#d99b00;">
+                Thương cậu nhiều 💛
+            </p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 style="text-align:center;">🌻 Những điều đáng yêu ở cậu</h2>
+
+        <p style="text-align:center; line-height:1.8;">
+            Bấm vào từng chiếc thẻ để nhận một lời khen nha!
+        </p>
+
+        <div class="compliments">
+            <div class="compliment" onclick="compliment(this, 'Nụ cười của cậu làm ngày bình thường trở nên đặc biệt hơn 💛')">
+                <span>🌞</span>
+                <strong>Ánh nắng</strong>
+                <p>Ấm áp như nắng vàng</p>
+            </div>
+
+            <div class="compliment" onclick="compliment(this, 'Cậu có nét đáng yêu theo cách rất riêng, không cần phải giống bất kỳ ai 🌼')">
+                <span>🌼</span>
+                <strong>Đáng yêu</strong>
+                <p>Theo cách riêng của cậu</p>
+            </div>
+
+            <div class="compliment" onclick="compliment(this, 'Tớ mong cậu luôn tin vào bản thân và những điều tốt đẹp cậu có thể làm ✨')">
+                <span>✨</span>
+                <strong>Tỏa sáng</strong>
+                <p>Luôn là chính mình</p>
+            </div>
+
+            <div class="compliment" onclick="compliment(this, 'Mong cậu luôn được trân trọng, lắng nghe và yêu thương thật chân thành 💛')">
+                <span>💛</span>
+                <strong>Đặc biệt</strong>
+                <p>Không ai thay thế được</p>
+            </div>
+        </div>
+
+        <p id="complimentText"
+           style="text-align:center; margin-top:20px; line-height:1.8; color:#b88300;">
+        </p>
+    </section>
+
+    <section class="card" style="text-align:center;">
+        <div style="font-size:45px;">🎀 🌷 🎀</div>
+
+        <h2>Một lời hứa nhỏ</h2>
+
+        <p class="message">
+            Tớ sẽ cố gắng lắng nghe cậu nhiều hơn,
+            quan tâm đến những điều nhỏ bé của cậu
+            và cùng cậu tạo nên những kỷ niệm thật đẹp.
+        </p>
+
+        <p style="font-size:24px; margin-top:18px;">
+            💛 🌻 💛
+        </p>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>Made with love, sunshine & yellow flowers 🌼</p>
+    <p>Chúc cậu một ngày 20/10 thật ngọt ngào!</p>
+    <p>💛 Cảm ơn vì cậu đã là chính mình 💛</p>
+</footer>
+
+<script>
+function openLetter() {
+    const letter = document.getElementById("secretLetter");
+    letter.classList.toggle("show");
+
+    if (letter.classList.contains("show")) {
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+        sendHearts();
+    }
+}
+
+function sendHearts() {
+    const symbols = ["💛", "🌼", "🌻", "✨", "💐"];
+
+    for (let i = 0; i < 24; i++) {
+        setTimeout(() => {
+            const item = document.createElement("div");
+            item.className = "floating-heart";
+            item.textContent =
+                symbols[Math.floor(Math.random() * symbols.length)];
+
+            item.style.left = Math.random() * 100 + "vw";
+            item.style.fontSize = (18 + Math.random() * 25) + "px";
+            item.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+            document.body.appendChild(item);
+
+            setTimeout(() => item.remove(), 6500);
+        }, i * 100);
+    }
+}
+
+function compliment(element, message) {
+    document.getElementById("complimentText").textContent = message;
+
+    element.style.background = "#ffe99c";
+
+    setTimeout(() => {
+        element.style.background = "";
+    }, 500);
+}
+</script>
+
+</body>
+</html>
