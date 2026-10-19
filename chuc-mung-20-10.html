@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc Mừng 20/10 - Mẹ Yêu</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Tahoma, sans-serif;
+  color: #81465f;
+  text-align: center;
+  background: linear-gradient(135deg, #fff1f7, #ffd9e9, #fff8fb);
+  overflow-x: hidden;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 18px 12px;
+}
+
+button {
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 18px;
+  cursor: pointer;
+  background: #e875a5;
+  color: white;
+  box-shadow: 0 4px 12px #d85d8b30;
+}
+
+button:hover {
+  background: #ce5688;
+}
+
+.card {
+  width: calc(100% - 32px);
+  max-width: 700px;
+  margin: 25px auto 40px;
+  padding: 38px 28px;
+  background: rgba(255,255,255,0.88);
+  border: 2px solid white;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px #c45c8b20;
+  animation: appear 1s ease;
+}
+
+.date {
+  display: inline-block;
+  padding: 9px 15px;
+  background: #ffe4ef;
+  color: #c44f82;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.flowers {
+  font-size: clamp(38px, 8vw, 65px);
+  margin: 20px 0;
+  line-height: 1.4;
+}
+
+h1 {
+  color: #d6538b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 8vw, 62px);
+  line-height: 1.2;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+  margin: 12px 0;
+}
+
+.subtitle {
+  font-size: clamp(16px, 3vw, 20px);
+  line-height: 1.7;
+  margin: 15px auto;
+}
+
+.message {
+  max-width: 540px;
+  margin: 24px auto;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: normal;
+  word-spacing: normal;
+  overflow-wrap: break-word;
+}
+
+.message strong {
+  color: #d6538b;
+}
+
+.signature {
+  color: #d6538b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.7;
+  margin-top: 25px;
+}
+
+.falling {
+  position: fixed;
+  top: -45px;
+  z-index: 5;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-5vh) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+.spark {
+  position: fixed;
+  z-index: 10;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--x), var(--y)) scale(0.1);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  padding: 0 15px 25px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ad7190;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+    margin-top: 12px;
+  }
+
+  .message {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 11px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="controls">
+  <button id="musicButton">♫ Bật nhạc nền</button>
+  <button id="flowerButton">🌸 Tắt hoa rơi</button>
+  <button id="fireworkButton">🎆 Bắn pháo hoa</button>
+</div>
+
+<main class="card">
+  <div class="date">20 THÁNG 10 · NGÀY PHỤ NỮ VIỆT NAM</div>
+
+  <div class="flowers">💐 🌷 💗</div>
+
+  <h1>Mẹ yêu dấu!</h1>
+
+  <p class="subtitle">
+    Chúc mừng ngày 20/10 đến người phụ nữ tuyệt vời nhất của con.
+  </p>
+
+  <p class="message">
+    Nhân ngày 20/10, con chúc <strong>Mẹ</strong> luôn mạnh khỏe,
+    bình an và mỗi ngày đều nở nụ cười thật tươi.
+
+    <br><br>
+
+    Cảm ơn Mẹ vì đã luôn yêu thương, chăm sóc và dành cho con
+    những điều tốt đẹp nhất. Con mong Mẹ luôn vui vẻ, hạnh phúc,
+    gặp thật nhiều may mắn và có thật nhiều thời gian để nghỉ ngơi.
+
+    <br><br>
+
+    Dù sau này con có lớn lên, con vẫn luôn biết ơn vì có Mẹ
+    bên cạnh. Mong rằng con sẽ luôn có cơ hội làm Mẹ vui,
+    khiến Mẹ tự hào và yêu thương Mẹ nhiều hơn mỗi ngày.
+
+    <br><br>
+
+    <strong>Con yêu Mẹ nhiều lắm! 💖</strong>
+  </p>
+
+  <div class="signature">
+    Thương Mẹ thật nhiều, từ con 🌷
+  </div>
+
+  <div style="margin-top:28px;">
+    <button id="heartButton">💗 Gửi ngàn trái tim đến Mẹ</button>
+    <button id="letterButton">💌 Lời nhắn dành cho Mẹ</button>
+  </div>
+</main>
+
+<div class="footer">
+  Được làm bằng tất cả tình yêu thương dành cho Mẹ 💕
+</div>
+
+<script>
+// HOA RƠI VÀ TRÁI TIM BAY
+let flowersOn = true;
+
+function createFalling(symbol) {
+  const item = document.createElement("span");
+  const symbols = ["🌸", "🌷", "🌼", "💗", "💕", "✨"];
+
+  item.className = "falling";
+  item.textContent = symbol ||
+    symbols[Math.floor(Math.random() * symbols.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (18 + Math.random() * 18) + "px";
+  item.style.animationDuration = (6 + Math.random() * 5) + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(), 12000);
+}
+
+const flowerTimer = setInterval(() => {
+  if (flowersOn) createFalling();
+}, 500);
+
+document.getElementById("flowerButton").onclick = function() {
+  flowersOn = !flowersOn;
+  this.textContent = flowersOn ? "🌸 Tắt hoa rơi" : "🌸 Bật hoa rơi";
+};
+
+// PHÁO HOA
+function fireworks(x, y) {
+  const colors = [
+    "#ff76ad", "#ffd166", "#b9a1ff",
+    "#ff8f8f", "#8de6d2", "#ffffff"
+  ];
+
+  x = x ?? window.innerWidth * (0.2 + Math.random() * 0.6);
+  y = y ?? window.innerHeight * 0.35;
+
+  for (let i = 0; i < 45; i++) {
+    const angle = Math.PI * 2 * i / 45;
+    const distance = 40 + Math.random() * 110;
+
+    const spark = document.createElement("span");
+    spark.className = "spark";
+    spark.style.left = x + "px";
+    spark.style.top = y + "px";
+    spark.style.background =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    spark.style.setProperty("--x", Math.cos(angle) * distance + "px");
+    spark.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+    document.body.appendChild(spark);
+    setTimeout(() => spark.remove(), 1100);
+  }
+}
+
+document.getElementById("fireworkButton").onclick = function() {
+  fireworks();
+  setTimeout(() => fireworks(window.innerWidth * 0.25,
+    window.innerHeight * 0.3), 250);
+  setTimeout(() => fireworks(window.innerWidth * 0.75,
+    window.innerHeight * 0.3), 500);
+};
+
+// NHẠC NỀN TẠO BẰNG ÂM THANH TRÌNH DUYỆT
+let audioContext = null;
+let musicTimer = null;
+let musicOn = false;
+let noteIndex = 0;
+
+const melody = [
+  523.25, 659.25, 783.99, 659.25,
+  698.46, 659.25, 587.33, 523.25,
+  587.33, 698.46, 783.99, 880,
+  783.99, 698.46, 659.25, 523.25
+];
+
+function playNote(frequency) {
+  if (!audioContext) return;
+
+  const oscillator = audioContext.createOscillator();
+  const gain = audioContext.createGain();
+  const now = audioContext.currentTime;
+
+  oscillator.type = "sine";
+  oscillator.frequency.value = frequency;
+
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(0.05, now + 0.04);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.32);
+
+  oscillator.connect(gain);
+  gain.connect(audioContext.destination);
+
+  oscillator.start(now);
+  oscillator.stop(now + 0.35);
+}
+
+document.getElementById("musicButton").onclick = async function() {
+  if (musicOn) {
+    clearInterval(musicTimer);
+    musicOn = false;
+    this.textContent = "♫ Bật nhạc nền";
+    return;
+  }
+
+  const AudioClass = window.AudioContext || window.webkitAudioContext;
+
+  if (!AudioClass) {
+    alert("Bạn hãy thử mở website bằng Chrome hoặc Edge nhé!");
+    return;
+  }
+
+  if (!audioContext) audioContext = new AudioClass();
+
+  if (audioContext.state === "suspended") {
+    await audioContext.resume();
+  }
+
+  musicOn = true;
+  this.textContent = "♫ Tắt nhạc nền";
+
+  playNote(melody[noteIndex]);
+  noteIndex = (noteIndex + 1) % melody.length;
+
+  musicTimer = setInterval(() => {
+    if (!musicOn) return;
+
+    playNote(melody[noteIndex]);
+    noteIndex = (noteIndex + 1) % melody.length;
+  }, 380);
+};
+
+// NÚT GỬI TRÁI TIM
+document.getElementById("heartButton").onclick = function() {
+  for (let i = 0; i < 35; i++) {
+    setTimeout(() => {
+      createFalling(["💖", "💕", "💗", "💝", "🌷"][
+        Math.floor(Math.random() * 5)
+      ]);
+    }, i * 70);
+  }
+
+  fireworks(window.innerWidth / 2, window.innerHeight * 0.35);
+};
+
+// LỜI NHẮN
+document.getElementById("letterButton").onclick = function() {
+  alert(
+    "Mẹ yêu ơi! 💗\n\n" +
+    "Cảm ơn Mẹ vì đã luôn ở bên con, " +
+    "yêu thương và chăm sóc con mỗi ngày.\n\n" +
+    "Con chúc Mẹ 20/10 thật vui vẻ, mạnh khỏe " +
+    "và luôn hạnh phúc. Con yêu Mẹ rất nhiều! 🌷"
+  );
+};
+
+// HIỆU ỨNG MỞ ĐẦU
+window.addEventListener("load", () => {
+  setTimeout(() => fireworks(window.innerWidth * 0.3,
+    window.innerHeight * 0.3), 500);
+  setTimeout(() => fireworks(window.innerWidth * 0.7,
+    window.innerHeight * 0.3), 900);
+});
+</script>
+
+</body>
+</html>
